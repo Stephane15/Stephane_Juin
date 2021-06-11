@@ -1,6 +1,6 @@
 /*
 * Author : stephanerheaume
-* Date : Jun. 9, 2021
+* Date : Jun. 11, 2021
 * Description : 
 */
 
@@ -10,26 +10,28 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
-public class Exemple2 {
-	
-	
+
+public class Exemple3 {
 	public static void main(String[] args) throws IOException,FileNotFoundException
 	{
 		FileReader ficALire;
 		BufferedReader entree;
-		char c;
-	
-		ficALire=new FileReader("monFIchier.txt");
+		int c;
+		
+		ficALire=new FileReader("monFichier.txt");
 		entree = new BufferedReader(ficALire);
-		c=(char) entree.read();
-		System.out.print(c);
-		c=(char) entree.read();
-		System.out.print(c);
-		c=(char) entree.read();
-		System.out.print(c);
+		c=entree.read();
+		
+		while(c != -1 )
+		{
+			System.out.print((char) c);
+			c=entree.read();
+		}
+		
 		entree.close();
 		ficALire.close();
 		
-		
 	}
-	}
+	
+	
+}

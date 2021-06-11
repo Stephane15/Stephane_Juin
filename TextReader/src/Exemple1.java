@@ -8,6 +8,7 @@
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 
 public class Exemple1 {
@@ -31,6 +32,9 @@ public class Exemple1 {
 			System.out.print("le fichier ne peut pas etre lu");
 		
 		}catch(IOException ioe)
+		{
+			System.out.print("Erreur entree/sortie");
+		}
 		
 	}
 
